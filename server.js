@@ -75,10 +75,10 @@ server.delete('/api/users/:id', (req, res) => {
 	}
 });
 
-server.put('/api/users/:id', (req, res) => {
-	const user = db.getUserById(req.params.id);
-	try {
-		if (!req.body.name || !req.body.bio) {
+	server.put('/api/users/:id', (req, res) => {
+    const user = db.getUserById(req.params.id);
+    try {
+      if (!req.body.name && !req.body.bio) {
 			return res
 				.status(400)
 				.json({ errorMessage: 'Please provide name and bio for the user.' });
