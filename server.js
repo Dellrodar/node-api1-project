@@ -64,14 +64,14 @@ server.delete("/api/users/:id", (req, res) => {
  server.put("/api/users/:id", (req, res) => {
   const user = db.getUserById(req.params.id)
   try {
-    if (user) {
+    if (!req.body.name || !req.body.bio) {
+      res.status(400).json({ errorMessage: "Please provide name and bio for the user." })
+     } else if (user) {
     db.updateUser(user.id, {
       name: req.body.name || user.name,
       bio: req.body.bio || user.bio,
     })
     res.status(200).json({message: "The user has been Updated!"})
-  } else {
-    res.status(400).json({ errorMessage: "Please provide name and bio for the user." })
   }} catch {
     res.status(500).json({ errorMessage: "The user information could not be modified." })
   }
