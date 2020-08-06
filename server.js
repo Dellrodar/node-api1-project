@@ -6,7 +6,7 @@ const db = require("./database");
 const server = express();
 
 server.use(express.json());
-server.cors(cors());
+server.use(cors());
 
 server.get("/", (req, res) => {
   res.json({ message: "Unit 4 Module 1 api project 1" })
