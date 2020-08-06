@@ -1,4 +1,4 @@
-let users = [
+const users = [
 	{ id: "1", name: "Jane Doe", bio: "Test bio" },
 	{ id: "2", name: "John Doe", bio: "Test bio" },
 	{ id: "3", name: "Jack Doe", bio: "Test bio" },

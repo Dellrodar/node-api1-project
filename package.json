@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "## Topics",
   "main": "database.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,9 +22,5 @@
   "bugs": {
     "url": "https://github.com/Dellrodar/node-api1-project/issues"
   },
-  "homepage": "https://github.com/Dellrodar/node-api1-project#readme",
-  "dependencies": {
-    "cors": "^2.8.5"
-  },
-  "devDependencies": {}
+  "homepage": "https://github.com/Dellrodar/node-api1-project#readme"
 }
